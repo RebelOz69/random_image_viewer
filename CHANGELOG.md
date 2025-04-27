@@ -1,3 +1,13 @@
+## 0.1.0
+
+Feature Update
+
+- Added custom placeholder widget support
+- Added custom error widget support
+- Added background color property
+- Added image rotation functionality with gesture support
+- Updated documentation
+
 ## 0.0.1
 
 Initial Release

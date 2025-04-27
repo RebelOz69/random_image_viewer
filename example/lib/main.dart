@@ -30,6 +30,8 @@ class MyHomePage extends StatefulWidget {
   State<MyHomePage> createState() => _MyHomePageState();
 }
 
+double _currentRotationAngle = 0.0;
+
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
@@ -45,14 +47,21 @@ class _MyHomePageState extends State<MyHomePage> {
             spacing: 20,
             children: <Widget>[
               // Here I am just using few properties/parameters, you can try all
-              const RandomImageViewer(
+              RandomImageViewer(
                 height: 200,
+                enableRotation: true,
+                progressIndicatorColor: Colors.red,
+                onTap: () {
+                  debugPrint("This is working onTap");
+                },
+                initialRotation: -45,
                 imagePath:
                     "https://plus.unsplash.com/premium_photo-1734354794200-49aec81e395d?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
                 // errorImagePath: "assets/images/mental.jpg",
               ),
               RandomImageViewer(
                 enableZoom: true,
+                doubleTapZoom: true,
                 maxScale: 50,
                 onTap: () {
                   print("assets/images/livinh.svg");
